@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WireWise — Learn Wiring Step-by-Step</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>WireWise</h1>
+    <p class="tagline">Learn wiring step-by-step — simulation only (low-voltage circuits)</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <div>
+        <strong>Level:</strong> <span id="levelName">1</span>
+      </div>
+      <button id="resetBtn">Reset</button>
+      <button id="hintBtn">Hint</button>
+      <button id="nextBtn">Next Level</button>
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="workspaceWrap">
+      <svg id="workspace" viewBox="0 0 1000 600" preserveAspectRatio="none"></svg>
+    </section>
+
+    <section id="instructions">
+      <h2>How to play</h2>
+      <ol>
+        <li>Click a terminal (small dot) to start drawing a wire.</li>
+        <li>Click another terminal to complete the wire.</li>
+        <li>Wire the components to satisfy the level goal.</li>
+        <li>Press Hint for help or Next Level to continue.</li>
+      </ol>
+      <p class="safety"><strong>Safety:</strong> This is a virtual simulator for education. Do not apply real mains or high voltage to components using these instructions. Always follow proper safety procedures with real electricity.</p>
+    </section>
+  </main>
+
+  <template id="component-template">
+    <!-- Filled by JS when placing components -->
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
