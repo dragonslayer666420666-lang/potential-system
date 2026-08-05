@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>WireWise — Learn Wiring Step-by-Step</title>
+  <title>WireWise — Learn Wiring Step-by-Step (3D)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,16 +24,16 @@
     </section>
 
     <section id="workspaceWrap">
-      <svg id="workspace" viewBox="0 0 1000 600" preserveAspectRatio="none"></svg>
+      <!-- Three.js canvas will be inserted here by the script -->
     </section>
 
     <section id="instructions">
       <h2>How to play</h2>
       <ol>
-        <li>Click a terminal (small dot) to start drawing a wire.</li>
+        <li>Click a terminal (sphere) to start a wire.</li>
         <li>Click another terminal to complete the wire.</li>
         <li>Wire the components to satisfy the level goal.</li>
-        <li>Press Hint for help or Next Level to continue.</li>
+        <li>Use mouse to orbit/zoom the 3D scene; press Hint for help or Next Level to continue.</li>
       </ol>
       <p class="safety"><strong>Safety:</strong> This is a virtual simulator for education. Do not apply real mains or high voltage to components using these instructions. Always follow proper safety procedures with real electricity.</p>
     </section>
@@ -43,6 +43,14 @@
     <!-- Filled by JS when placing components -->
   </template>
 
+  <!-- Three.js (UMD), OrbitControls, and postprocessing (UnrealBloom) -->
+  <script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://unpkg.com/three@0.154.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://unpkg.com/three@0.154.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://unpkg.com/three@0.154.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+
+  <!-- Main script (3D) -->
   <script src="script.js"></script>
 </body>
 </html>
